@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.container-slider {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Left */
+.slide-left {
+  position: absolute;
+  width: 35%;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  transition: transform 0.5s linear;
+}
+
+.slide-left > div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+.slide-left h2 {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1100px) {
+  .slide-left h2 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 850px) {
+  .slide-left h2 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 600px) {
+  .slide-left h2 {
+    margin-bottom: 20px;
+  }
+}
+
+.slide-left p {
+  font-size: 15px;
+}
+
+@media (max-width: 850px) {
+  .slide-left p {
+    font-size: 10px;
+  }
+}
+
+.color-1-slide {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(252, 196, 79, 0.6),
+      rgba(19, 3, 2, 0.9)
+    ),
+    url("img/img4.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.color-2-slide {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(204, 156, 134, 0.6),
+      rgba(19, 3, 2, 0.9)
+    ),
+    url("img/img3.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.color-3-slide {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(165, 57, 47, 0.6),
+      rgba(19, 3, 2, 0.9)
+    ),
+    url("img/img2.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.color-4-slide {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(161, 83, 38, 0.6),
+      rgba(19, 3, 2, 0.9)
+    ),
+    url("img/img1.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+/* Right */
+.slide-right {
+  position: absolute;
+  width: 65%;
+  height: 100%;
+  top: 0;
+  left: 35%;
+
+  transition: transform 0.5s linear;
+}
+
+.slide-right > div {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.image-1 {
+  background-image: url(img/img1.jpg);
+}
+.image-2 {
+  background-image: url(img/img2.jpg);
+}
+.image-3 {
+  background-image: url(img/img3.jpg);
+}
+.image-4 {
+  background-image: url(img/img4.jpg);
+}
+
+/* Arrows */
+.arrow-btn .arrow {
+  position: absolute;
+  z-index: 100;
+  left: 35%;
+  top: 50%;
+}
+
+.arrowDown i,
+.arrowUp i {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 5px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) {
+  .arrowDown i,
+  .arrowUp i {
+    font-size: 30px;
+  }
+}
+@media (max-width: 850px) {
+  .arrowDown i,
+  .arrowUp i {
+    font-size: 20px;
+  }
+}
+
+.arrowDown i:hover,
+.arrowUp i:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transition: background 0.3s linear;
+}
+.arrowDown i {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.arrowUp i {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.arrowDown i {
+  transform: translateX(-100%);
+}
+.arrowUp i {
+  transform: translateY(-100%);
+}
